@@ -5,8 +5,6 @@ participant server
 ```mermaid
 graph TD;
 
-    browser: Enter note in input field, and submit form by clicking save button.
-
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
     deactivate server
