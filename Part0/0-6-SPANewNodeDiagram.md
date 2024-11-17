@@ -10,6 +10,6 @@ activate server
 server-->>browser: {"message": "note created"}
 deactivate server
 
-Note right of browser: New note added to the list by updating the last note only on the browser side.
+Note right of browser: New note added to the list by updating/rendering the last note part only on the browser side.
 
 ```
