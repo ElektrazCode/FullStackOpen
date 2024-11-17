@@ -1,15 +1,13 @@
+```mermaid
 sequenceDiagram
 participant browser
 participant server
 
-```mermaid
-graph TD;
-
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    Note right of browser: Payload: new note
     activate server
     deactivate server
-    Note right of browser: Javascript saves the new note to array or DB.
-
+    Note left of server: Javascript adds the new note to the list of notes.
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
@@ -34,5 +32,4 @@ graph TD;
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
-
 ```
