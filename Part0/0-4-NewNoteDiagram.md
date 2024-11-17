@@ -3,11 +3,13 @@ sequenceDiagram
 participant browser
 participant server
 
+    Note right of browser: New note entered in input field and submit button clicked.
+
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     Note right of browser: Payload: new note
     activate server
     deactivate server
-    Note left of server: Javascript adds the new note to the list of notes.
+    Note left of server: Javascript adds the new note to the list of notes and redirects to reload the notes page.
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
